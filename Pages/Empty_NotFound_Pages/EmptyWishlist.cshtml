@@ -1,0 +1,34 @@
+﻿@page
+
+@model EmptyWishlistModel
+@{
+}
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h2>@ViewData["Title"]</h2>
+            <h3>@ViewData["Message"]</h3>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-condensed table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Aktionen</th>
+                            <th>Kategorie</th>
+                            <th>Nickname</th>
+                            <th>URL</th>
+                            <th>Geändert</th>
+                            <th>Bemerkung</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div>
+                <a class="btn btn-primary" asp-controller="Shortcuts" asp-action="ExportShortcutsAsCSV">Export CSV</a>
+                <a class="btn btn-primary" asp-page="New">Neuer Shortcut</a>
+            </div>
+        </div>
+    </div>
+</div>
